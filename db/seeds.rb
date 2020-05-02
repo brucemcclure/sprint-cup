@@ -4,4 +4,11 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+soft_dev = Category.create(title: "Software Development", description: "The dos and donts of working with other developers")
+
+for i in 0..20
+    soft_dev.fines.create(title: "test #{i}", description: "description #{i}", amount: i)
+    soft_dev.awards.create(title: "test #{i}", description: "description #{i}", amount: i)
+end
+

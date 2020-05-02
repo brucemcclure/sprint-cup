@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_050728) do
+ActiveRecord::Schema.define(version: 2020_05_02_054727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "awards", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "amount"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_awards_on_category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fines", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "amount"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_fines_on_category_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -24,4 +51,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_050728) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "awards", "categories"
+  add_foreign_key "fines", "categories"
 end
