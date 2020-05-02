@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_054727) do
+ActiveRecord::Schema.define(version: 2020_05_02_070726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,25 @@ ActiveRecord::Schema.define(version: 2020_05_02_054727) do
     t.index ["category_id"], name: "index_fines_on_category_id"
   end
 
+  create_table "leagues", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_leagues_on_category_id"
+  end
+
+  create_table "sprints", force: :cascade do |t|
+    t.string "title"
+    t.datetime "deadline"
+    t.string "meeting_point"
+    t.bigint "league_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["league_id"], name: "index_sprints_on_league_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
@@ -53,4 +72,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_054727) do
 
   add_foreign_key "awards", "categories"
   add_foreign_key "fines", "categories"
+  add_foreign_key "leagues", "categories"
+  add_foreign_key "sprints", "leagues"
 end
