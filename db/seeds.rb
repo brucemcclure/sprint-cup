@@ -86,6 +86,7 @@ end
 User.first.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id]) 
 User.find(2).leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id]) 
 
+# Adding the users to the the two leagues
 for i in 3..6
     League.first.users << User.find(i)
 end
