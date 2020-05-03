@@ -51,6 +51,7 @@ house_fine_data = HOUSE_FINE_DATA
 dev_award_data = DEV_AWARD_DATA
 house_award_data = HOUSE_AWARD_DATA
 league_data = LEAGUE_DATA
+sprint_data = SPRINT_DATA
 
 # Creating 10 users
 for user in user_data
@@ -91,4 +92,10 @@ end
 
 for i in 7..10
     League.find(2).users << User.find(i)
+end
+
+# Creating 3 sprints per League
+
+for sprint in sprint_data
+    Sprint.create( title: sprint[:title], deadline: sprint[:deadline], meeting_point: sprint[:meeting_point], league_id: sprint[:league_id])
 end
