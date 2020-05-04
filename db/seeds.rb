@@ -72,8 +72,10 @@ for fine in house_fine_data
     Fine.create(sort: fine[:sort], title: fine[:title], description: fine[:description], amount: rand(1..5), category_id: 2)
 end
 
-User.first.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id]) 
-User.first.leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id]) 
+b = User.first
+
+b.first.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id], user: b) 
+b.first.leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id], user: b) 
 
 # Adding the users to the the two leagues
 for i in 2..34
