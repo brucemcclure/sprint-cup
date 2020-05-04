@@ -56,20 +56,6 @@ USER_DATA = [
     { name: "sally browner", username: "sallyb", email: "sally.browner@coderacademy.edu.au", password: "password"},
     { name: "steph schaffer", username: "stephs", email: "steph.schaffer@coderacademy.edu.au", password: "password"}]
 
-# Users
-# USER_DATA = [
-#     { name: "Squirtle", username: "Squirt", email: "squirt@email.com", password: "password"},
-#     { name: "Wartortle", username: "War", email: "war@email.com", password: "password"},
-#     { name: "Blastoise", username: "Blast", email: "blast@email.com", password: "password"},
-#     { name: "Bulbasaur", username: "Bulba", email: "bulba@email.com", password: "password"},
-#     { name: "Ivysaur", username: "Ivy", email: "ivy@email.com", password: "password"},
-#     { name: "Venasaur", username: "Vena", email: "vena@email.com", password: "password"},
-#     { name: "Charmander", username: "Charm", email: "charm@email.com", password: "password"},
-#     { name: "Charmeleon", username: "Leon", email: "leon@email.com", password: "password"},
-#     { name: "Charizard", username: "Zard", email: "zard@email.com", password: "password"},
-#     { name: "Ditto", username: "Ditto", email: "ditto@email.com", password: "password"},
-# ]
-
 # Categories 
 CATEGORY_DATA = [
     { title: "softdev fines", description: "git gud"},
@@ -118,6 +104,3 @@ SPRINT_DATA = [
     { title: "Week 2", deadline: "7/06/2020", meeting_point: "Mclarens", league_id: 2 },
     { title: "Week 3", deadline: "14/06/2020", meeting_point: "Mclarens", league_id: 2 },
 ]
-
-
-

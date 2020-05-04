@@ -4,4 +4,5 @@ class League < ApplicationRecord
 
   belongs_to :category
   has_many :sprints
+  belongs_to :user
 end

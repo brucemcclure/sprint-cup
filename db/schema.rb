@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_072133) do
+ActiveRecord::Schema.define(version: 2020_05_04_075008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(version: 2020_05_04_072133) do
     t.bigint "sprint_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "fine_id"
+    t.index ["fine_id"], name: "index_points_on_fine_id"
     t.index ["sprint_id"], name: "index_points_on_sprint_id"
     t.index ["user_id"], name: "index_points_on_user_id"
   end
@@ -95,6 +97,7 @@ ActiveRecord::Schema.define(version: 2020_05_04_072133) do
   add_foreign_key "leagues", "categories"
   add_foreign_key "members", "leagues"
   add_foreign_key "members", "users"
+  add_foreign_key "points", "fines"
   add_foreign_key "points", "sprints"
   add_foreign_key "points", "users"
   add_foreign_key "sprints", "leagues"
