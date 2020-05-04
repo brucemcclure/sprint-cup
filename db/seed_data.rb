@@ -79,38 +79,30 @@ CATEGORY_DATA = [
 
 # Fines 
 DEV_FINE_DATA = [
-    { title: "pushing code directly to Master", description: "no exceptions. dont do it.", amount: 1, category_id: 1 },
-    { title: "no comments", description: "it doesnt matter how good the code is if nobody can understand it", amount: 2, category_id: 1 },
-    { title: "working too late, without a good reason", description: "tired devs, burn out...", amount: 3, category_id: 1 },
-    { title: "bad code convention", description: "we live in a society... there are rules", amount: 4, category_id: 1 },
-    { title: "bad company convention", description: "we dont do that here", amount: 5, category_id: 1 },
+    { sort: "fine", title: "pushing code directly to Master", description: "no exceptions. dont do it.", amount: 1, category_id: 1 },
+    { sort: "fine", title: "no comments", description: "it doesnt matter how good the code is if nobody can understand it", amount: 2, category_id: 1 },
+    { sort: "fine", title: "working too late, without a good reason", description: "tired devs, burn out...", amount: 3, category_id: 1 },
+    { sort: "fine", title: "bad code convention", description: "we live in a society... there are rules", amount: 4, category_id: 1 },
+    { sort: "fine", title: "bad company convention", description: "we dont do that here", amount: 5, category_id: 1 },
+    { sort: "award", title: "teaching back", description: "raising the level of your colleagues raises the lecel of the firm", amount: 1, category_id: 1 },
+    { sort: "award", title: "good comments", description: "good comments dont get enough praise", amount: 2, category_id: 1 },
+    { sort: "award", title: "clean code", description: "the mark of a good citizen", amount: 3, category_id: 1 },
+    { sort: "award", title: "flagging a bug", description: "not turning a blind eye", amount: 4, category_id: 1 },
+    { sort: "award", title: "helping out a jr", description: "be the mentor you wanted to have", amount: 5, category_id: 1 },
 ]
 
 HOUSE_FINE_DATA = [
-    { title: "leaving the trash when its full", description: "its not your job but you should still do it", amount: 1, category_id: 2 },
-    { title: "leaving coffe mugs on your desk", description: "banish the hoarder", amount: 2, category_id: 2 },
-    { title: "not putting dishes in the dish washer", description: "there is a machine that cleans things for you and you dont use it?!", amount: 3, category_id: 2 },
-    { title: "listening to music without headphones", description: "seriously, who does that", amount: 4, category_id: 2 },
-    { title: "bitching without solutions", description: "it brings the solutions with the problems", amount: 5, category_id: 2 },
+    { sort: "fine", title: "leaving the trash when its full", description: "its not your job but you should still do it", amount: 1, category_id: 2 },
+    { sort: "fine", title: "leaving coffe mugs on your desk", description: "banish the hoarder", amount: 2, category_id: 2 },
+    { sort: "fine", title: "not putting dishes in the dish washer", description: "there is a machine that cleans things for you and you dont use it?!", amount: 3, category_id: 2 },
+    { sort: "fine", title: "listening to music without headphones", description: "seriously, who does that", amount: 4, category_id: 2 },
+    { sort: "fine", title: "bitching without solutions", description: "it brings the solutions with the problems", amount: 5, category_id: 2 },
+    { sort: "award", title: "tidy desk", description: "it just makes the office look better", amount: 1, category_id: 2 },
+    { sort: "award", title: "unpacking dishwasher", description: "be the change you want to see in the world", amount: 2, category_id: 2 },
+    { sort: "award", title: "locking up", description: "youre the hero we need not the hero we deserve", amount: 3, category_id: 2 },
+    { sort: "award", title: "opening up", description: "early bird catches the worm", amount: 4, category_id: 2 },
+    { sort: "award", title: "initiating team coffee", description: "team work makes the dream work", amount: 5, category_id: 2 },
 ]
-
-# Awards
-DEV_AWARD_DATA = [
-    { title: "teaching back", description: "raising the level of your colleagues raises the lecel of the firm", amount: 1, category_id: 1 },
-    { title: "good comments", description: "good comments dont get enough praise", amount: 2, category_id: 1 },
-    { title: "clean code", description: "the mark of a good citizen", amount: 3, category_id: 1 },
-    { title: "flagging a bug", description: "not turning a blind eye", amount: 4, category_id: 1 },
-    { title: "helping out a jr", description: "be the mentor you wanted to have", amount: 5, category_id: 1 },
-]
-
-HOUSE_AWARD_DATA = [
-    { title: "tidy desk", description: "it just makes the office look better", amount: 1, category_id: 2 },
-    { title: "unpacking dishwasher", description: "be the change you want to see in the world", amount: 2, category_id: 2 },
-    { title: "locking up", description: "youre the hero we need not the hero we deserve", amount: 3, category_id: 2 },
-    { title: "opening up", description: "early bird catches the worm", amount: 4, category_id: 2 },
-    { title: "initiating team coffee", description: "team work makes the dream work", amount: 5, category_id: 2 },
-]
-
 
 # Leagues
 LEAGUE_DATA = [

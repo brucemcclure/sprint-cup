@@ -48,8 +48,6 @@ user_data = USER_DATA
 category_data = CATEGORY_DATA
 dev_fine_data = DEV_FINE_DATA
 house_fine_data = HOUSE_FINE_DATA
-dev_award_data = DEV_AWARD_DATA
-house_award_data = HOUSE_AWARD_DATA
 league_data = LEAGUE_DATA
 sprint_data = SPRINT_DATA
 
@@ -66,22 +64,12 @@ end
 
 # Creates dev fines
 for fine in dev_fine_data
-    Fine.create(title: fine[:title], description: fine[:description], amount: rand(1..5), category_id: 1)
+    Fine.create(sort: fine[:sort], title: fine[:title], description: fine[:description], amount: rand(1..5), category_id: 1)
 end
 
 # Creates house fines
 for fine in house_fine_data
-    Fine.create(title: fine[:title], description: fine[:description], amount: rand(1..5), category_id: 2)
-end
-
-# Creates dev awards
-for award in dev_award_data
-    Award.create(title: award[:title], description: award[:description], amount: rand(1..5), category_id: 1)
-end
-
-# Creates house awards
-for award in house_award_data
-    Award.create(title: award[:title], description: award[:description], amount: rand(1..5), category_id: 2)
+    Fine.create(sort: fine[:sort], title: fine[:title], description: fine[:description], amount: rand(1..5), category_id: 2)
 end
 
 User.first.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id]) 
