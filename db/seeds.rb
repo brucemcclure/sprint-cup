@@ -56,6 +56,7 @@ sprint_data = SPRINT_DATA
 # Creating 10 users
 for user in user_data
     User.create(name: user[:name], username: user[:username], email: user[:email], password: user[:password])
+    # puts "created #{user[:name]}"
 end
 
 # Creates 2 categories
@@ -84,14 +85,14 @@ for award in house_award_data
 end
 
 User.first.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id]) 
-User.find(2).leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id]) 
+User.first.leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id]) 
 
 # Adding the users to the the two leagues
-for i in 3..6
+for i in 2..34
     League.first.users << User.find(i)
 end
 
-for i in 7..10
+for i in 35..56
     League.find(2).users << User.find(i)
 end
 
@@ -99,4 +100,18 @@ end
 
 for sprint in sprint_data
     Sprint.create( title: sprint[:title], deadline: sprint[:deadline], meeting_point: sprint[:meeting_point], league_id: sprint[:league_id])
+end
+
+for i in 1..2
+    users_in_league = League.find(i).users
+    sprints_in_league = League.find(i).sprints
+
+    for sprint in sprints_in_league
+        for user in users_in_league
+            Point.create( points: rand(1..5), user: user, sprint: sprint)
+            Point.create( points: rand(1..5), user: user, sprint: sprint)
+            Point.create( points: rand(1..5), user: user, sprint: sprint)
+            Point.create( points: rand(1..5), user: user, sprint: sprint)
+        end
+    end
 end
