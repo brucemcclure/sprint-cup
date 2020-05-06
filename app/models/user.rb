@@ -1,8 +1,8 @@
 class User < ApplicationRecord
     has_secure_password
-    has_many :members
+    has_many :members, dependent: :destroy
     has_many :leagues, through: :members
-    has_many :points
+    has_many :points, dependent: :destroy
     has_many :sprints, through: :points
 
     validates :email, presence: true, uniqueness: true

@@ -97,10 +97,10 @@ LEAGUE_DATA = [
 ]
 
 SPRINT_DATA = [
-    { title: "Week 1", deadline: "1/06/2020", meeting_point: "Mclarens", league_id: 1 },
-    { title: "Week 2", deadline: "7/06/2020", meeting_point: "Mclarens", league_id: 1 },
-    { title: "Week 3", deadline: "14/06/2020", meeting_point: "Mclarens", league_id: 1 },
-    { title: "Week 1", deadline: "1/06/2020", meeting_point: "Mclarens", league_id: 2 },
-    { title: "Week 2", deadline: "7/06/2020", meeting_point: "Mclarens", league_id: 2 },
-    { title: "Week 3", deadline: "14/06/2020", meeting_point: "Mclarens", league_id: 2 },
+    { title: "Week 1", deadline: "1/06/2020", active: "inactive", meeting_point: "Mclarens", league_id: 1 },
+    { title: "Week 2", deadline: "7/06/2020", active: "inactive", meeting_point: "Mclarens", league_id: 1 },
+    { title: "Week 3", deadline: "14/06/2020", active: "active", meeting_point: "Mclarens", league_id: 1 },
+    { title: "Week 1", deadline: "1/06/2020", active: "inactive", meeting_point: "Mclarens", league_id: 2 },
+    { title: "Week 2", deadline: "7/06/2020", active: "inactive", meeting_point: "Mclarens", league_id: 2 },
+    { title: "Week 3", deadline: "14/06/2020", active: "active", meeting_point: "Mclarens", league_id: 2 },
 ]

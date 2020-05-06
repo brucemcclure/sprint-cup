@@ -74,8 +74,8 @@ end
 
 b = User.first
 
-b.first.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id], user: b) 
-b.first.leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id], user: b) 
+b.leagues.create(title: league_data[0][:title], description: league_data[0][:description], category_id: league_data[0][:category_id], user: b) 
+b.leagues.create(title: league_data[1][:title], description: league_data[1][:description], category_id: league_data[1][:category_id], user: b) 
 
 # Adding the users to the the two leagues
 for i in 2..34
@@ -89,21 +89,21 @@ end
 # Creating 3 sprints per League
 
 for sprint in sprint_data
-    Sprint.create( title: sprint[:title], deadline: sprint[:deadline], meeting_point: sprint[:meeting_point], league_id: sprint[:league_id])
+    Sprint.create( title: sprint[:title], deadline: sprint[:deadline], active: sprint[:active], meeting_point: sprint[:meeting_point], league_id: sprint[:league_id])
 end
 
 
-    users_in_league = League.find(1).users
-    sprints_in_league = League.find(1).sprints
+users_in_league = League.find(1).users
+sprints_in_league = League.find(1).sprints
 
-    for sprint in sprints_in_league
-        for user in users_in_league
-            Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
-            Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
-            Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
-            Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
-        end
+for sprint in sprints_in_league
+    for user in users_in_league
+        Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
+        Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
+        Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
+        Point.create( fine_id: rand(1..10) ,points: rand(1..5), user: user, sprint: sprint)
     end
+end
 
     users_in_league = League.find(2).users
     sprints_in_league = League.find(2).sprints
